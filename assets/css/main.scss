@@ -76,13 +76,13 @@ $text: $black;
         background-color: $primary;
     }
     @media screen and (min-width: 1024px) {
-        left: calc(((100% - $desktop - (2 * $gap)) / 2) - 150px);
+        left: calc(((100% - 960px) / 2) - 150px);
     }
     @media screen and (min-width: 1216px) {
-        left: calc(((100% - $widescreen - (2 * $gap)) / 2) - 150px);
+        left: calc(((100% - 1152px) / 2) - 150px);
     }
     @media screen and (min-width: 1408px) {
-        left: calc(((100% - $fullhd - (2 * $gap)) / 2) - 150px);
+        left: calc(((100% - 1344px) / 2) - 150px);
     }
 }
 
