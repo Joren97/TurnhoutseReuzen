@@ -1,0 +1,138 @@
+// Import Bulma's core
+@import "~bulma/sass/utilities/_all";
+
+// Set your colors
+$primary: #c10110;
+$black: #222324;
+$light: #f2f2ea;
+$success: #96dd44;
+$primary-invert: findColorInvert($primary);
+$twitter: #4099ff;
+$twitter-invert: findColorInvert($twitter);
+
+// Setup $colors to use as bulma classes (e.g. 'is-twitter')
+$colors: (
+    "white": (
+        $white,
+        $black,
+    ),
+    "black": (
+        $black,
+        $white,
+    ),
+    "light": (
+        $light,
+        $light-invert,
+    ),
+    "dark": (
+        $dark,
+        $dark-invert,
+    ),
+    "primary": (
+        $primary,
+        $primary-invert,
+    ),
+    "info": (
+        $info,
+        $info-invert,
+    ),
+    "success": (
+        $success,
+        $success-invert,
+    ),
+    "warning": (
+        $warning,
+        $warning-invert,
+    ),
+    "danger": (
+        $danger,
+        $danger-invert,
+    ),
+    "twitter": (
+        $twitter,
+        $twitter-invert,
+    ),
+);
+
+// Links
+$link: $primary;
+$link-invert: $primary-invert;
+$link-focus-border: $primary;
+$text: $black;
+
+// Import Bulma and Buefy styles
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
+
+.vertical-banner {
+    position: absolute;
+    width: 300px;
+    display: block;
+    height: 100%;
+    top: 0;
+    left: calc(((100% - 1344px) / 2) - 150px);
+
+    &.kaartreuzen {
+        background-color: $primary;
+    }
+    @media screen and (min-width: 1024px) {
+        left: calc(((100% - $desktop - (2 * $gap)) / 2) - 150px);
+    }
+    @media screen and (min-width: 1216px) {
+        left: calc(((100% - $widescreen - (2 * $gap)) / 2) - 150px);
+    }
+    @media screen and (min-width: 1408px) {
+        left: calc(((100% - $fullhd - (2 * $gap)) / 2) - 150px);
+    }
+}
+
+.divider {
+    width: 200px;
+    display: block;
+    border-width: 2px;
+    border-style: solid;
+
+    &.kaartreuzen {
+        border-color: $primary;
+    }
+}
+
+.blog-posts {
+    .post-img {
+        border-radius: 6px;
+    }
+
+    .divider {
+        width: 100%;
+        display: block;
+        border-bottom: 1px solid $black;
+    }
+}
+
+.hero.is-large {
+    background-image: url("~@/assets/img/banner.jpg");
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-color: rgba(48, 49, 54, 0.55);
+    min-height: calc(60vh - 3.25rem);
+    box-shadow: 0 3px 30px 0px #303136;
+}
+
+.footer {
+    color: white !important;
+    a {
+        color: white !important;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    padding: 3rem 0rem 0rem 0rem;
+
+    .border-bottom {
+        display: block;
+        width: 100%;
+        border-bottom: 0.0625rem solid rgba(255,255,255,.1);
+    }
+}
