@@ -9,11 +9,16 @@
             </div>
             <div class="column is-5">
               <div>
-                <h3 class="heading post-category">{{ latestPost.acf.categorie.name }}</h3>
+                <h3 class="heading post-category">
+                  {{ latestPost.acf.categorie.name }}
+                </h3>
                 <h1 class="title post-title">
                   {{ latestPost.title.rendered }}
                 </h1>
-                <p class="post-excerpt" v-html="shortContent(latestPost, 400)"></p>
+                <p
+                  class="post-excerpt"
+                  v-html="shortContent(latestPost, 400)"
+                ></p>
                 <br />
                 <a href="#" class="button is-primary">Lees meer</a>
               </div>
@@ -21,7 +26,7 @@
           </article>
         </div>
       </div>
-      <hr>
+      <hr />
       <div class="columns is-multiline">
         <div class="column is-4 post" v-for="p in posts" :key="p.id">
           <article class="columns is-multiline">
@@ -31,7 +36,10 @@
             <div class="column is-12 featured-content">
               <h3 class="heading post-category">{{ p.acf.categorie.name }}</h3>
               <h1 class="title post-title">{{ p.title.rendered }}</h1>
-                <p class="post-excerpt" v-html="shortContent(latestPost, 180)"></p>
+              <p
+                class="post-excerpt"
+                v-html="shortContent(latestPost, 180)"
+              ></p>
               <br />
               <a href="#" class="button is-primary">Lees meer</a>
             </div>

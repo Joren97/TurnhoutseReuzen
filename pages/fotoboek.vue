@@ -3,12 +3,18 @@
     <div class="container">
       <div class="columns">
         <div class="column is-12 content">
-          <h1 class="title">Fotoboek</h1>
+          <h1 class="title is-1">Fotoboek</h1>
+          <hr />
         </div>
       </div>
-      <div class="columns is-multiline">
+      <div class="columns" v-if="loadingActive">
+        <div class="column is-12">
+          <text-loader />
+        </div>
+      </div>
+      <div class="columns is-multiline" v-else>
         <div class="column is-6" v-for="(f, i) in formattedFotoboeken" :key="i">
-          <h2 class="title">{{ f.title }}</h2>
+          <h2 class="title is-3">{{ f.title }}</h2>
           <b-carousel
             :indicator-inside="false"
             :autoplay="false"
@@ -38,7 +44,7 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component } from "nuxt-property-decorator";
+import { Vue, Component, Provide } from "nuxt-property-decorator";
 import { fotoboekModule } from "~/store";
 
 const getAttrFromString = (str: string, node: string, attr: string) => {
@@ -52,19 +58,11 @@ const getAttrFromString = (str: string, node: string, attr: string) => {
 };
 
 @Component({})
-export default class Blog extends Vue {
+export default class Fotoboek extends Vue {
+  @Provide()
   gallery: boolean = false;
-  galleryId: number | undefined = undefined;
-
-  switchGallery(value: boolean, id?: number) {
-    this.gallery = value;
-    this.galleryId = id;
-    if (value) {
-      return document.documentElement.classList.add("is-clipped");
-    } else {
-      return document.documentElement.classList.remove("is-clipped");
-    }
-  }
+  @Provide()
+  galleryId: number | undefined = 0;
 
   async beforeMount() {
     fotoboekModule.get();
@@ -72,6 +70,10 @@ export default class Blog extends Vue {
 
   get fotoboeken() {
     return fotoboekModule.items;
+  }
+
+  get loadingActive() {
+    return fotoboekModule.loading;
   }
 
   get formattedFotoboeken() {
@@ -91,6 +93,16 @@ export default class Blog extends Vue {
         images: getAttrFromString(content, "img", "src"),
       };
     });
+  }
+
+  switchGallery(value: boolean, id?: number) {
+    this.gallery = value;
+    this.galleryId = id;
+    if (value) {
+      return document.documentElement.classList.add("is-clipped");
+    } else {
+      return document.documentElement.classList.remove("is-clipped");
+    }
   }
 }
 </script>

@@ -15,17 +15,18 @@
     <div class="section">
       <div class="container">
         <div class="columns">
-          <div class="column is-8" v-if="page">
+          <div class="column is-8" v-if="pageLoading"><text-loader /></div>
+          <div class="column is-8" v-if="!pageLoading && page">
             <h1 class="title is-1">Welkom</h1>
             <hr />
             <div v-html="page.content.rendered" class="content"></div>
           </div>
-          <div class="column is-4">
+          <div class="column is-4" v-if="postLoading"><text-loader /></div>
+          <div class="column is-4" v-if="!postLoading && latestPost">
             <h2 class="title is-1">Laatste nieuws</h2>
             <hr />
             <p
               class="post-excerpt content"
-              v-if="latestPost"
               v-html="shortContent(latestPost, 150)"
             ></p>
             <p><router-link to="/">Lees meer</router-link></p>
@@ -52,6 +53,14 @@ export default class Blog extends Vue {
 
   get latestPost() {
     return postModule.items[0];
+  }
+
+  get pageLoading() {
+    return pageModule.loading;
+  }
+
+  get postLoading() {
+    return postModule.loading;
   }
 
   shortContent(post: any, length: number) {

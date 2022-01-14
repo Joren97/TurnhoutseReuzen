@@ -1,21 +1,31 @@
 const axiosObject =
   process.env.NODE_ENV === 'test'
     ? {
-        baseURL: 'https://www.yera.be/wp-json',
-        progress: false,
-      }
+      baseURL: 'https://www.yera.be/wp-json',
+      progress: false,
+    }
     : process.env.NODE_ENV === 'prod'
-    ? {
+      ? {
         baseURL: 'http://www.yera.be/wp-json',
         progress: false,
       }
-    : {
+      : {
         baseURL: 'https://zenithwebdesign.be/projects/turnhoutsereuzen/wp-json',
         progress: false,
       };
 
+const routerObject =
+  process.env.NODE_ENV === 'production'
+    ? {
+      router: {
+        base: '/projects/reuzenclubturnhout',
+      },
+    }
+    : {};
+
 
 export default {
+  ...routerObject,
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
@@ -61,7 +71,7 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {...axiosObject},
+  axios: { ...axiosObject },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
