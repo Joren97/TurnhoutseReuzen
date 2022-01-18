@@ -15,7 +15,6 @@ const axiosObject =
       };
 
 export default {
-  ...routerObject,
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
