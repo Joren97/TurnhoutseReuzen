@@ -15,14 +15,18 @@
     <div class="section">
       <div class="container">
         <div class="columns">
-          <div class="column is-8" v-if="pageLoading"><text-loader /></div>
-          <div class="column is-8" v-if="!pageLoading && page">
+          <div class="column is-8" v-show="pageLoading"><text-loader /></div>
+          <div class="column is-8" v-show="!pageLoading && page">
             <h1 class="title is-1">Welkom</h1>
             <hr />
-            <div v-html="page.content.rendered" class="content"></div>
+            <div
+              v-if="page"
+              v-html="page.content.rendered"
+              class="content"
+            ></div>
           </div>
-          <div class="column is-4" v-if="pageLoading"><text-loader /></div>
-          <div class="column is-4" v-if="!pageLoading">
+          <div class="column is-4" v-show="pageLoading"><text-loader /></div>
+          <div class="column is-4" v-show="!pageLoading">
             <h2 class="title is-1">Neem contact op</h2>
             <hr />
             <div class="content">
@@ -44,34 +48,19 @@
 
 <script lang="ts">
 import { Vue, Component } from "nuxt-property-decorator";
-import { pageModule, postModule } from "~/store";
+import { pageModule } from "~/store";
 @Component({})
-export default class Blog extends Vue {
+export default class Index extends Vue {
   async beforeMount() {
     pageModule.get("home");
-    postModule.get();
   }
 
   get page() {
     return pageModule.items[0];
   }
 
-  get latestPost() {
-    return postModule.items[0];
-  }
-
   get pageLoading() {
     return pageModule.loading;
-  }
-
-  get postLoading() {
-    return postModule.loading;
-  }
-
-  shortContent(post: any, length: number) {
-    if (!post) return "";
-    const content = post.content.rendered;
-    return content.substring(content.indexOf(">") + 1, length) + "..";
   }
 }
 </script>
