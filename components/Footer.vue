@@ -2,7 +2,7 @@
   <footer class="footer has-background-grey-dark">
     <div class="container content pb-3">
       <div class="columns content">
-        <div class="column is-3 has-text-white">
+        <div class="column is-2 has-text-white">
           <h3 class="has-text-white has-text-weight-light">Menu</h3>
           <p>
             <router-link to="/" class="has-text-weight-light">Home</router-link>
@@ -10,7 +10,7 @@
           <p><router-link to="/">Home</router-link></p>
           <p><router-link to="/">Home</router-link></p>
         </div>
-        <div class="column is-3 has-text-white">
+        <div class="column is-2 has-text-white">
           <h3 class="has-text-white has-text-weight-light">Contact</h3>
           <p><a href="tel:+32477076234">+32 (0) 477 07 62 34</a></p>
           <p>
@@ -49,6 +49,11 @@
               </figure>
             </div>
           </div>
+        </div>
+        <div class="column is-2">
+          <figure class="image is-128x128">
+            <img src="~/assets/img/logo.png" alt="Logo Turnhoutse reuzenclub" />
+          </figure>
         </div>
       </div>
     </div>

@@ -1,15 +1,14 @@
 import { VuexModule, Module, Mutation, Action } from 'vuex-module-decorators';
 import { $axios } from '~/utils/api';
 
-const RESOURCE = '/wp/v2/posts';
+const RESOURCE = '/wp/v2/kleinPeerke';
 
-@Module({ name: 'post', stateFactory: true, namespaced: true })
-export default class GlobalModule extends VuexModule {
+@Module({ name: 'kleinPeerke', stateFactory: true, namespaced: true })
+export default class KleinPeerkeModule extends VuexModule {
     error: string | null = ''
     success: string | null = ''
     loading: boolean = false
     items: Array<any> = []
-    item: any = null
 
     @Mutation
     setError(value: string | null = 'An unknown error occured'): void {
@@ -34,12 +33,6 @@ export default class GlobalModule extends VuexModule {
         this.loading  = false;
     }
 
-    @Mutation
-    setItem(value: any): void {
-        this.item = value;
-        this.loading  = false;
-    }
-
     @Action
     async get() {
         try {
@@ -48,20 +41,6 @@ export default class GlobalModule extends VuexModule {
             `${RESOURCE}?order_by=date&acf_format=standard`,
           );
           this.setItems(data);
-        } catch (error) {
-            this.setError();
-            this.setLoading(false);
-        }
-      }
-
-      @Action
-    async getById(id: string | null) {
-        try {
-            this.setLoading(true);
-          let {data} = await $axios.get(
-            `${RESOURCE}/${id}?order_by=date&acf_format=standard`,
-          );
-          this.setItem(data);
         } catch (error) {
             this.setError();
             this.setLoading(false);

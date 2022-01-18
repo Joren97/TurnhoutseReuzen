@@ -8,7 +8,7 @@
           <h1 class="title is-1">Onze dorspreuzen</h1>
         </div>
         <div class="column is-narrow is-3">
-          <img src="~/assets/img/kaartreuzen.svg" alt="" class="badge-image" />
+          <img src="~/assets/img/dorpsreuzen.svg" alt="" class="badge-image" />
         </div>
       </div>
       <div class="columns is-vcentered" v-for="i in dorpsreuzen" :key="i.id">

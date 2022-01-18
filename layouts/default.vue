@@ -4,7 +4,7 @@
       <template #brand>
         <b-navbar-item tag="router-link" :to="{ path: '/' }">
           <img
-            src="https://raw.githubusercontent.com/buefy/buefy/dev/static/img/buefy-logo.png"
+            src="~/assets/img/logo.png"
             alt="Lightweight UI components for Vue.js based on Bulma"
           />
         </b-navbar-item>
@@ -16,7 +16,7 @@
         <b-navbar-item tag="router-link" to="/blog">
           Mededelingen
         </b-navbar-item>
-        <b-navbar-item tag="router-link" to="/reuzen">
+        <b-navbar-item tag="router-link" to="/indebanvanreuzen">
           In de ban van Reuzen
         </b-navbar-item>
         <b-navbar-item tag="router-link" to="/fotoboek">
@@ -25,7 +25,10 @@
         <b-navbar-item tag="router-link" to="/kleurplaat">
           Kleurplaten
         </b-navbar-item>
-        <b-navbar-dropdown label="Onze reuzen">
+        <b-navbar-item tag="router-link" to="/reuzen">
+          Onze reuzen
+        </b-navbar-item>
+        <!-- <b-navbar-dropdown label="Onze reuzen">
           <b-navbar-item tag="router-link" to="/kaartreuzen">
             Kaartreuzen
           </b-navbar-item>
@@ -35,7 +38,7 @@
           <b-navbar-item tag="router-link" to="/kleinpeerke">
             Klein Peerke &amp; d&apos;Aachturenmoeijer
           </b-navbar-item>
-        </b-navbar-dropdown>
+        </b-navbar-dropdown> -->
         <b-navbar-item tag="router-link" to="/contact">Contact</b-navbar-item>
       </template>
     </b-navbar>

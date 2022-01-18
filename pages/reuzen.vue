@@ -1,14 +1,42 @@
 <template>
-  <div>
-    <div class="section">
-      <div class="container">
-        <div class="columns">
-          <div class="column is-12" v-if="pageLoading"><text-loader /></div>
-          <div class="column is-12" v-if="!pageLoading && page">
-            <h1 class="title is-1">In de ban van de reuzen</h1>
-            <hr />
-            <div v-html="page.content.rendered" class="content"></div>
+  <div class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          <div class="content">
+            <h1 class="title is-1">Onze reuzen</h1>
           </div>
+          <hr />
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column is-4 has-text-centered">
+          <nuxt-link to="kaartreuzen">
+            <b-image
+              :src="require('~/assets/img/kaartreuzen.svg')"
+              ratio="1by1"
+            ></b-image>
+
+            <h3 class="title is-3">Kaartreuzen</h3>
+          </nuxt-link>
+        </div>
+        <div class="column is-4 has-text-centered">
+          <nuxt-link to="dorpsreuzen">
+            <b-image
+              :src="require('~/assets/img/dorpsreuzen.svg')"
+              ratio="1by1"
+            ></b-image>
+            <h3 class="title is-3">Dorpsreuzen</h3>
+          </nuxt-link>
+        </div>
+        <div class="column is-4 has-text-centered">
+          <nuxt-link to="kleinpeerke">
+            <b-image
+              :src="require('~/assets/img/klein-peerke.svg')"
+              ratio="1by1"
+            ></b-image>
+            <h3 class="title is-3">Klein Peerke</h3>
+          </nuxt-link>
         </div>
       </div>
     </div>
@@ -17,19 +45,6 @@
 
 <script lang="ts">
 import { Vue, Component } from "nuxt-property-decorator";
-import { pageModule, postModule } from "~/store";
 @Component({})
-export default class Blog extends Vue {
-  async beforeMount() {
-    pageModule.get("in-de-ban-van-de-reuzen");
-  }
-
-  get page() {
-    return pageModule.items[0];
-  }
-
-  get pageLoading() {
-    return pageModule.loading;
-  }
-}
+export default class Reuzen extends Vue {}
 </script>

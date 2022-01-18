@@ -33,8 +33,12 @@
                   v-html="shortContent(latestPost, 400)"
                 ></p>
                 <br />
-                <a href="#" class="button is-primary" v-if="showContent"
-                  >Lees meer</a
+                <b-button
+                  tag="nuxt-link"
+                  :to="`post?id=${latestPost.id}`"
+                  v-if="showContent"
+                  class="is-primary"
+                  >Lees meer</b-button
                 >
               </div>
             </div>
@@ -61,14 +65,14 @@
               ></b-skeleton>
               <h1 v-else class="title post-title">{{ p.title.rendered }}</h1>
               <p v-if="loadingActive"><text-loader /></p>
-              <p
-                v-else
-                class="post-excerpt"
-                v-html="shortContent(latestPost, 180)"
-              ></p>
+              <p v-else class="post-excerpt" v-html="shortContent(p, 180)"></p>
               <br />
-              <a href="#" class="button is-primary" v-if="!loadingActive"
-                >Lees meer</a
+              <b-button
+                tag="nuxt-link"
+                :to="`post?id=${p.id}`"
+                v-if="!loadingActive"
+                class="is-primary"
+                >Lees meer</b-button
               >
             </div>
           </article>
