@@ -22,6 +22,9 @@
         <b-navbar-item tag="router-link" to="/fotoboek">
           Fotoboek
         </b-navbar-item>
+        <b-navbar-item tag="router-link" to="/kleurplaat">
+          Kleurplaten
+        </b-navbar-item>
         <b-navbar-dropdown label="Onze reuzen">
           <b-navbar-item tag="router-link" to="/kaartreuzen">
             Kaartreuzen
@@ -33,6 +36,7 @@
             Klein Peerke &amp; d&apos;Aachturenmoeijer
           </b-navbar-item>
         </b-navbar-dropdown>
+        <b-navbar-item tag="router-link" to="/contact">Contact</b-navbar-item>
       </template>
     </b-navbar>
 

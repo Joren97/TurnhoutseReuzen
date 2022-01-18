@@ -21,15 +21,20 @@
             <hr />
             <div v-html="page.content.rendered" class="content"></div>
           </div>
-          <div class="column is-4" v-if="postLoading"><text-loader /></div>
-          <div class="column is-4" v-if="!postLoading && latestPost">
-            <h2 class="title is-1">Laatste nieuws</h2>
+          <div class="column is-4" v-if="pageLoading"><text-loader /></div>
+          <div class="column is-4" v-if="!pageLoading">
+            <h2 class="title is-1">Neem contact op</h2>
             <hr />
-            <p
-              class="post-excerpt content"
-              v-html="shortContent(latestPost, 150)"
-            ></p>
-            <p><router-link to="/">Lees meer</router-link></p>
+            <div class="content">
+              <h3 class="title is-3">Jef Neeskens</h3>
+              <p>
+                Voorzitter<br />0032 14 41 43 79<br />info@reuzenclubturnhout.be
+              </p>
+              <h3 class="title is-3">Frank Segers</h3>
+              <p>
+                Ondervoorzitter<br />0032 478 36 60 72<br />frank@reuzenclubturnhout.be
+              </p>
+            </div>
           </div>
         </div>
       </div>

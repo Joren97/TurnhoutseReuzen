@@ -5,9 +5,11 @@
 $primary: #c10110;
 $black: #222324;
 $light: #f2f2ea;
-$success: #96dd44;
+$success: #006633;
+$danger: #c10110;
+$info: #003399;
 $primary-invert: findColorInvert($primary);
-$twitter: #4099ff;
+$twitter: #003399;
 $twitter-invert: findColorInvert($twitter);
 
 // Setup $colors to use as bulma classes (e.g. 'is-twitter')
@@ -73,7 +75,13 @@ $text: $black;
     left: calc(((100% - 1344px) / 2) - 150px);
 
     &.kaartreuzen {
-        background-color: $primary;
+        background-color: $danger;
+    }
+    &.dorpsreuzen {
+        background-color: $info;
+    }
+    &.klein-peerke {
+        background-color: $success;
     }
     @media screen and (min-width: 1024px) {
         left: calc(((100% - 960px) / 2) - 150px);
@@ -93,7 +101,15 @@ $text: $black;
     border-style: solid;
 
     &.kaartreuzen {
-        border-color: $primary;
+        border-color: $danger;
+    }
+
+    &.dorpsreuzen {
+        border-color: $info;
+    }
+
+    &.klein-peerke {
+        border-color: $success;
     }
 }
 
@@ -118,6 +134,15 @@ $text: $black;
     box-shadow: 0 3px 30px 0px #303136;
 }
 
+.hero.is-medium {
+    background-image: url("~@/assets/img/kleurplaat.jpg");
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-color: rgba(48, 49, 54, 0.55);
+    min-height: calc(60vh - 3.25rem);
+    box-shadow: 0 3px 30px 0px #303136;
+}
+
 .footer {
     color: white !important;
     a {
@@ -133,6 +158,11 @@ $text: $black;
     .border-bottom {
         display: block;
         width: 100%;
-        border-bottom: 0.0625rem solid rgba(255,255,255,.1);
+        border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.1);
     }
+}
+
+.playing-card {
+    border-radius: 1rem;
+    box-shadow: 0.2em 0.2em 0.5em #333;
 }

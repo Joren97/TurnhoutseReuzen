@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer has-background-black">
+  <footer class="footer has-background-grey-dark">
     <div class="container content pb-3">
       <div class="columns content">
         <div class="column is-3 has-text-white">
