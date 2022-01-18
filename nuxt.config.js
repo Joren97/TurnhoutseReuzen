@@ -14,16 +14,6 @@ const axiosObject =
         progress: false,
       };
 
-const routerObject =
-  process.env.NODE_ENV === 'production'
-    ? {
-      router: {
-        base: '/projects/reuzenclubturnhout',
-      },
-    }
-    : {};
-
-
 export default {
   ...routerObject,
   // Target: https://go.nuxtjs.dev/config-target
