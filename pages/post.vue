@@ -47,7 +47,12 @@ import { postModule } from "~/store";
 @Component({})
 export default class Post extends Vue {
   beforeMount() {
-    postModule.getById(this.$route.query.id);
+    if (this.$route.query) {
+      if (this.$route.query.id) {
+        const id = <string>this.$route.query.id;
+        postModule.getById(id);
+      }
+    }
   }
 
   get post() {

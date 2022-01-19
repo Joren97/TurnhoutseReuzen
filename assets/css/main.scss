@@ -134,12 +134,11 @@ $text: $black;
     box-shadow: 0 3px 30px 0px #303136;
 }
 
-.hero.is-medium {
+.hero.is-fullheight {
     background-image: url("~@/assets/img/kleurplaat.jpg");
     background-blend-mode: multiply;
     background-size: cover;
     background-color: rgba(48, 49, 54, 0.55);
-    min-height: calc(60vh - 3.25rem);
     box-shadow: 0 3px 30px 0px #303136;
 }
 

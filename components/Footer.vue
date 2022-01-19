@@ -2,6 +2,11 @@
   <footer class="footer has-background-grey-dark">
     <div class="container content pb-3">
       <div class="columns content">
+        <div class="column is-2">
+          <figure class="image is-128x128">
+            <img src="~/assets/img/logo.png" alt="Logo Turnhoutse reuzenclub" />
+          </figure>
+        </div>
         <div class="column is-2 has-text-white">
           <h3 class="has-text-white has-text-weight-light">Menu</h3>
           <p>
@@ -49,11 +54,6 @@
               </figure>
             </div>
           </div>
-        </div>
-        <div class="column is-2">
-          <figure class="image is-128x128">
-            <img src="~/assets/img/logo.png" alt="Logo Turnhoutse reuzenclub" />
-          </figure>
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="hero is-medium main-content">
+    <section class="hero is-fullheight main-content">
       <div class="hero-body">
         <div class="container content">
           <div class="columns">

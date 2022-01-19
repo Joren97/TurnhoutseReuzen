@@ -5,7 +5,7 @@
         <div class="container content">
           <div class="columns">
             <div class="column is-7">
-              <p class="title has-text-white">De Turnhoutse reuzenclub</p>
+              <p class="title has-text-white">De Turnhoutse Reuzenclub vzw</p>
               <p class="subtitle has-text-white">In de ban van de reuzen!</p>
             </div>
           </div>
@@ -19,11 +19,7 @@
           <div class="column is-8" v-show="!pageLoading && page">
             <h1 class="title is-1">Welkom</h1>
             <hr />
-            <div
-              v-if="page"
-              v-html="page.content.rendered"
-              class="content"
-            ></div>
+            <div v-html="page.content.rendered" class="content"></div>
           </div>
           <div class="column is-4" v-show="pageLoading"><text-loader /></div>
           <div class="column is-4" v-show="!pageLoading">
