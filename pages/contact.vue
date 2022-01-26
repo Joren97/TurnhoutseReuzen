@@ -22,32 +22,26 @@
               column="6"
             />
             <member
-              name="Jef Neeskens"
-              email="info@reuzenclubturnhout.be"
+              name="Frank Segers"
+              email="frank@reuzenclubturnhout.be"
               tel="0032 14 41 43 79"
-              role="Voorzitter"
+              role="Ondervoorzitter"
               column="6"
             />
           </div>
           <div class="columns">
             <member
-              name="Jef Neeskens"
-              email="info@reuzenclubturnhout.be"
+              name="Cis Goris"
               tel="0032 14 41 43 79"
-              role="Voorzitter"
-              column="4"
+              column="3"
+              role="Secretaris"
             /><member
-              name="Jef Neeskens"
-              email="info@reuzenclubturnhout.be"
-              tel="0032 14 41 43 79"
-              role="Voorzitter"
-              column="4"
-            /><member
-              name="Jef Neeskens"
-              email="info@reuzenclubturnhout.be"
-              tel="0032 14 41 43 79"
-              role="Voorzitter"
-              column="4"
+              name="Wim Moonnen"
+              column="3"
+              role="Penningmeester"
+            /><member name="Willem Van Eemeren" column="3" /><member
+              name="Paul Slangen"
+              column="3"
             />
           </div>
         </div>
