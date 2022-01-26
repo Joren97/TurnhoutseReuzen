@@ -4,7 +4,7 @@
       <template #brand>
         <b-navbar-item tag="router-link" :to="{ path: '/' }">
           <img
-            src="~/assets/img/logo.png"
+            src="~/assets/img/logo.svg"
             alt="Lightweight UI components for Vue.js based on Bulma"
           />
         </b-navbar-item>

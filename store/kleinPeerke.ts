@@ -1,7 +1,7 @@
 import { VuexModule, Module, Mutation, Action } from 'vuex-module-decorators';
 import { $axios } from '~/utils/api';
 
-const RESOURCE = '/wp/v2/kleinPeerke';
+const RESOURCE = '/wp/v2/kleinpeerke';
 
 @Module({ name: 'kleinPeerke', stateFactory: true, namespaced: true })
 export default class KleinPeerkeModule extends VuexModule {
@@ -38,7 +38,7 @@ export default class KleinPeerkeModule extends VuexModule {
         try {
             this.setLoading(true);
           let {data} = await $axios.get(
-            `${RESOURCE}?order_by=date&acf_format=standard`,
+            `${RESOURCE}?order_by=date&acf_format=standard&per_page=100`,
           );
           this.setItems(data);
         } catch (error) {

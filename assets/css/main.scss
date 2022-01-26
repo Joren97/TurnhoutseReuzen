@@ -11,6 +11,7 @@ $info: #003399;
 $primary-invert: findColorInvert($primary);
 $twitter: #003399;
 $twitter-invert: findColorInvert($twitter);
+$shadow: #96989a;
 
 // Setup $colors to use as bulma classes (e.g. 'is-twitter')
 $colors: (
@@ -134,7 +135,7 @@ $text: $black;
     box-shadow: 0 3px 30px 0px #303136;
 }
 
-.hero.is-fullheight {
+.hero.kleurplaat {
     background-image: url("~@/assets/img/kleurplaat.jpg");
     background-blend-mode: multiply;
     background-size: cover;
@@ -163,5 +164,7 @@ $text: $black;
 
 .playing-card {
     border-radius: 1rem;
-    box-shadow: 0.2em 0.2em 0.5em #333;
+    -webkit-box-shadow: 5px 5px 0px 0px $shadow;
+    box-shadow: 5px 5px 0px 0px $shadow;
+    border: 3px solid $black;
 }

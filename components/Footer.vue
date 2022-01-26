@@ -4,7 +4,7 @@
       <div class="columns content">
         <div class="column is-2">
           <figure class="image is-128x128">
-            <img src="~/assets/img/logo.png" alt="Logo Turnhoutse reuzenclub" />
+            <img src="~/assets/img/logo.svg" alt="Logo Turnhoutse reuzenclub" />
           </figure>
         </div>
         <div class="column is-2 has-text-white">

@@ -52,6 +52,9 @@ export default class Index extends Vue {
   }
 
   get page() {
+    if (!pageModule.items[0]) {
+      return { content: { rendered: "" } };
+    }
     return pageModule.items[0];
   }
 

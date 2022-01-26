@@ -7,6 +7,7 @@ import kleurplaten from '~/store/kleurplaten';
 import post from '~/store/post';
 import page from '~/store/page';
 import fotoboek from '~/store/fotoboek';
+import contact from '~/store/contact';
 
 let kaartreuzenModule: kaartreuzen;
 let dorpsreuzenModule: dorpsreuzen;
@@ -15,6 +16,7 @@ let postModule: post;
 let pageModule: page;
 let fotoboekModule: fotoboek;
 let kleurplatenModule: kleurplaten;
+let contactModule: contact;
 
 function initialiseStores(store: Store<any>): void {
     kaartreuzenModule = getModule(kaartreuzen, store);
@@ -24,6 +26,7 @@ function initialiseStores(store: Store<any>): void {
     fotoboekModule = getModule(fotoboek, store);
     kleurplatenModule = getModule(kleurplaten, store);
     kleinPeerkeModule = getModule(kleinPeerke, store);
+    contactModule = getModule(contact, store);
 }
 
-export { initialiseStores, kaartreuzenModule,dorpsreuzenModule, postModule, pageModule, fotoboekModule, kleurplatenModule, kleinPeerkeModule}
+export { initialiseStores, kaartreuzenModule, dorpsreuzenModule, postModule, pageModule, fotoboekModule, kleurplatenModule, kleinPeerkeModule, contactModule }

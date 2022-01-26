@@ -38,7 +38,7 @@ export default class GlobalModule extends VuexModule {
         try {
             this.setLoading(true);
           let {data} = await $axios.get(
-            `${RESOURCE}?order_by=date&acf_format=standard`,
+            `${RESOURCE}?order_by=date&acf_format=standard&per_page=100`,
           );
           this.setItems(data);
         } catch (error) {
