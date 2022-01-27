@@ -19,14 +19,14 @@
         <b-navbar-item tag="router-link" to="/indebanvanreuzen">
           In de ban van Reuzen
         </b-navbar-item>
+        <b-navbar-item tag="router-link" to="/reuzen">
+          Onze reuzen
+        </b-navbar-item>
         <b-navbar-item tag="router-link" to="/fotoboek">
           Fotoboek
         </b-navbar-item>
         <b-navbar-item tag="router-link" to="/kleurplaat">
           Kleurplaten
-        </b-navbar-item>
-        <b-navbar-item tag="router-link" to="/reuzen">
-          Onze reuzen
         </b-navbar-item>
         <!-- <b-navbar-dropdown label="Onze reuzen">
           <b-navbar-item tag="router-link" to="/kaartreuzen">

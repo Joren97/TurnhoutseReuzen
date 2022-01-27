@@ -10,16 +10,21 @@
           </div>
         </div>
       </div>
-      <div class="columns is-multiline is-justify-content-center">
+      <div class="columns is-multiline is-justify-content-center mb-5">
         <div class="column is-2" v-for="k in kleurplaten" :key="k.id">
-          <div class="card">
+          <b-image
+            :src="k.media_details.sizes.full.source_url"
+            custom-class="playing-card"
+            ratio="3by4"
+          ></b-image>
+          <!-- <div class="card">
             <div class="card-image">
               <a
                 :href="k.source_url"
                 :download="k.title.rendered"
                 target="_blank"
               >
-                <figure class="image is-4by3">
+                <figure class="image is-3by4">
                   <img
                     :src="k.media_details.sizes.full.source_url"
                     alt="Placeholder image"
@@ -27,7 +32,7 @@
                 </figure>
               </a>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>

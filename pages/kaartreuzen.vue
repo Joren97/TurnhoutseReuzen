@@ -2,23 +2,22 @@
   <div class="section is-relative">
     <div class="vertical-banner kaartreuzen is-hidden-mobile"></div>
     <div class="container">
-      <div class="columns is-mobile is-vcentered">
-        <div class="column is-3 is-hidden-mobile"></div>
-        <div class="column is-9-mobile content">
-          <h1 class="title is-1">Onze kaartreuzen</h1>
-        </div>
-        <div class="column is-narrow is-3">
-          <img src="~/assets/img/kaartreuzen.svg" alt="" class="badge-image" />
-        </div>
-      </div>
+      <reuzen-header title="Onze kaartreuzen" image="kaartreuzen.svg" />
       <reuzen-prent v-for="i in kaartreuzen" :key="i.id" :reus="i" />
+      <back-to-top text="Back to top">
+        <b-button type="is-primary" icon-right="arrow-up" />
+      </back-to-top>
     </div>
   </div>
 </template>
 <script lang="ts">
 import { Vue, Component } from "nuxt-property-decorator";
 import { kaartreuzenModule } from "~/store";
-@Component({})
+// @ts-ignore
+import BackToTop from "vue-backtotop";
+@Component({
+  components: { BackToTop },
+})
 export default class Kaartreuzen extends Vue {
   async beforeMount() {
     kaartreuzenModule.get();

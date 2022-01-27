@@ -1,52 +1,30 @@
 <template>
-  <footer class="footer has-background-grey-dark">
-    <div class="container content pb-3">
-      <div class="columns content">
-        <div class="column is-2">
-          <figure class="image is-128x128">
+  <footer class="footer has-background-grey-dark py-1">
+    <div class="container content py-0 my-0">
+      <div class="columns content is-vcentered">
+        <div class="column is-2 has-text-centered-mobile">
+          <figure class="image is-128x128 is-inline-block">
             <img src="~/assets/img/logo.svg" alt="Logo Turnhoutse reuzenclub" />
           </figure>
         </div>
-        <div class="column is-2 has-text-white">
-          <h3 class="has-text-white has-text-weight-light">Menu</h3>
-          <p>
-            <router-link to="/" class="has-text-weight-light">Home</router-link>
-          </p>
-          <p><router-link to="/">Home</router-link></p>
-          <p><router-link to="/">Home</router-link></p>
-        </div>
-        <div class="column is-2 has-text-white">
-          <h3 class="has-text-white has-text-weight-light">Contact</h3>
-          <p><a href="tel:+32477076234">+32 (0) 477 07 62 34</a></p>
-          <p>
-            <a href="mailto:info@reuzenclubturnhout.be"
-              >info@reuzenclubturnhout.be</a
-            >
-          </p>
-          <p>
-            <a
-              href="https://www.facebook.com/profile.php?id=100063455529651"
-              target="_blank"
-              rel="noreferrer"
-              >Facebook</a
-            >
-          </p>
-        </div>
-        <div class="column has-text-white">
+        <div class="column has-text-white has-text-centered-mobile">
           <h3 class="has-text-white has-text-weight-light">
-            In samenwerking met
+            Turnhoutse Reuzenclub vzw
           </h3>
+          <p>Maatschappelijke zetel:<br />De Merodelei 47 ,2300 Turnhout</p>
+        </div>
+        <div class="column is-narrow has-text-white">
           <div class="columns is-vcentered">
-            <div class="column is-narrow">
-              <figure class="image is-128x128">
+            <div class="column is-narrow has-text-centered-mobile">
+              <figure class="image is-128x128 is-inline-block">
                 <img
                   src="~/assets/img/reuzen-in-vlaanderen.png"
                   alt="Logo reuzen in vlaanderen"
                 />
               </figure>
             </div>
-            <div class="column is-narrow">
-              <figure class="image">
+            <div class="column is-narrow has-text-centered-mobile">
+              <figure class="image is-inline-block">
                 <img
                   src="~/assets/img/reusvriendelijke-gemeente.png"
                   alt="Logo reusvriendelijke gemeente"
@@ -58,8 +36,13 @@
       </div>
     </div>
     <div class="border-bottom"></div>
-    <div class="content has-text-centered has-text-white py-5">
-      <p>Gemaakt door Joren Synaeve</p>
+    <div class="content has-text-centered has-text-white py-3">
+      <p>
+        Ontwerp:
+        <a href="https://jorensynaeve.be" target="_blank" rel="noreferrer"
+          >Joren Synaeve</a
+        >
+      </p>
     </div>
   </footer>
 </template>
