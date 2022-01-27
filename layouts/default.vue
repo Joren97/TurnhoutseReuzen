@@ -47,6 +47,10 @@
       <Nuxt />
     </section>
     <Footer />
+
+    <back-to-top text="Back to top">
+      <b-button type="is-primary" icon-right="arrow-up" />
+    </back-to-top>
   </div>
 </template>
 

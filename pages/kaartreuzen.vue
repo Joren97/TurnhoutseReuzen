@@ -4,9 +4,6 @@
     <div class="container">
       <reuzen-header title="Onze kaartreuzen" image="kaartreuzen.svg" />
       <reuzen-prent v-for="i in kaartreuzen" :key="i.id" :reus="i" />
-      <back-to-top text="Back to top">
-        <b-button type="is-primary" icon-right="arrow-up" />
-      </back-to-top>
     </div>
   </div>
 </template>
