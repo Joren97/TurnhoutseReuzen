@@ -2,7 +2,7 @@
   <div class="section is-relative">
     <div class="vertical-banner kaartreuzen is-hidden-mobile"></div>
     <div class="container">
-      <reuzen-header title="Onze kaartreuzen" image="kaartreuzen.svg" />
+      <reuzen-header title="De kaartreuzen" image="kaartreuzen.svg" />
       <reuzen-prent v-for="i in kaartreuzen" :key="i.id" :reus="i" />
     </div>
   </div>

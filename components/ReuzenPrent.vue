@@ -8,7 +8,9 @@
       ></b-image>
     </div>
     <div class="column content ml-5">
-      <h2 class="title is-1">{{ reus.title.rendered }}</h2>
+      <h2 class="title is-1">
+        <span v-html="reus.title.rendered"></span>
+      </h2>
       <p class="subtitle is-3">{{ reus.acf.ondertitel }}</p>
       <p class="divider kaartreuzen"></p>
       <p>

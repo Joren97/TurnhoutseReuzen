@@ -2,7 +2,10 @@
   <div class="section is-relative">
     <div class="vertical-banner dorpsreuzen is-hidden-mobile"></div>
     <div class="container">
-      <reuzen-header title="Onze dorspreuzen" image="dorpsreuzen.svg" />
+      <reuzen-header
+        title="De reuzen van de Dorpsgemeenschap"
+        image="dorpsreuzen.svg"
+      />
       <reuzen-prent v-for="i in dorpsreuzen" :key="i.id" :reus="i" />
     </div>
   </div>

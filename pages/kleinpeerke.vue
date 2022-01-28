@@ -2,7 +2,10 @@
   <div class="section is-relative">
     <div class="vertical-banner klein-peerke is-hidden-mobile"></div>
     <div class="container">
-      <reuzen-header title="Klein peerke" image="klein-peerke.svg" />
+      <reuzen-header
+        title="Klein Peerke,  d’Aachturenmoeijer, de Hummelpummeltjes en de Vuurman"
+        image="klein-peerke.svg"
+      />
       <reuzen-prent v-for="i in kleinPeerke" :key="i.id" :reus="i" />
     </div>
   </div>
