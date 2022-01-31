@@ -13,9 +13,7 @@
       </h2>
       <p class="subtitle is-3">{{ reus.acf.ondertitel }}</p>
       <p class="divider kaartreuzen"></p>
-      <p>
-        {{ reus.acf.beschrijving }}
-      </p>
+      <p v-html="reus.acf.beschrijving"></p>
     </div>
   </div>
 </template>
