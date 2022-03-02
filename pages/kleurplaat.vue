@@ -5,34 +5,19 @@
         <div class="container content">
           <div class="columns">
             <div class="column is-7">
-              <h1 class="title is-1 has-text-white">Reuzenkleurplaten</h1>
+              <h1 class="title is-1 has-text-white">Kleurplaten</h1>
             </div>
           </div>
         </div>
       </div>
-      <div class="columns is-multiline is-justify-content-center mb-5">
+      <div class="columns is-multiline is-justify-content-right mr-5 mb-5">
         <div class="column is-2" v-for="k in kleurplaten" :key="k.id">
+          <a :href="k.source_url" target="_blank" link="noreferrer">
           <b-image
             :src="k.media_details.sizes.full.source_url"
             custom-class="playing-card"
             ratio="3by4"
-          ></b-image>
-          <!-- <div class="card">
-            <div class="card-image">
-              <a
-                :href="k.source_url"
-                :download="k.title.rendered"
-                target="_blank"
-              >
-                <figure class="image is-3by4">
-                  <img
-                    :src="k.media_details.sizes.full.source_url"
-                    alt="Placeholder image"
-                  />
-                </figure>
-              </a>
-            </div>
-          </div> -->
+          ></b-image></a>
         </div>
       </div>
     </section>

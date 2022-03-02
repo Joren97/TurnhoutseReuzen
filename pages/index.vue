@@ -1,16 +1,13 @@
 <template>
   <div>
-    <section class="hero is-large main-content">
-      <div class="hero-body">
-        <div class="container content">
-          <div class="columns">
-            <div class="column is-7">
-              <p class="title has-text-white">De Turnhoutse Reuzenclub vzw</p>
-              <p class="subtitle has-text-white">In de ban van de reuzen!</p>
+    <section class="hero is-large main-content"><div class="content is-relative homepage-title">
+          <div class="columns ">
+            <div class="column">
+              <p class="title has-text-white is-size-1"><span class="is-uppercase"> De Turnhoutse Reuzenclub </span>vzw</p>
+              <p class="subtitle has-text-white is-size-3">In de ban van de reuzen&nbsp;!</p>
             </div>
           </div>
         </div>
-      </div>
     </section>
     <div class="section">
       <div class="container">
@@ -26,14 +23,14 @@
             <h2 class="title is-1">Neem contact op</h2>
             <hr />
             <div class="content">
-              <h3 class="title is-3">Jef Neeskens</h3>
-              <p>
-                Voorzitter<br />0032 14 41 43 79<br />info@reuzenclubturnhout.be
-              </p>
-              <h3 class="title is-3">Frank Segers</h3>
-              <p>
-                Ondervoorzitter<br />0032 478 36 60 72<br />frank@reuzenclubturnhout.be
-              </p>
+              <b-carousel
+            :indicator-inside="true"
+            :autoplay="true"
+          >
+            <b-carousel-item v-for="(url, i) in homepageFotoboek.images" :key="i">
+              <b-image class="image is-clickable" :src="url"></b-image>
+            </b-carousel-item>
+          </b-carousel>
             </div>
           </div>
         </div>
@@ -44,11 +41,34 @@
 
 <script lang="ts">
 import { Vue, Component } from "nuxt-property-decorator";
-import { pageModule } from "~/store";
+import { fotoboekModule, pageModule } from "~/store";
+
+const getAttrFromString = (str: string, node: string, attr: string) => {
+  var regex = new RegExp("<" + node + " .*?" + attr + '="(.*?)"', "gi"),
+    result,
+    res = [];
+  while ((result = regex.exec(str))) {
+    res.push(result[1]);
+  }
+  return res;
+};
+
+
 @Component({})
 export default class Index extends Vue {
   async beforeMount() {
     pageModule.get("home");
+    fotoboekModule.getHomepageCarousel();
+  }
+
+  get homepageFotoboek(){
+    if (!fotoboekModule.homepageFotoboek) return {images: []};
+    const item = fotoboekModule.homepageFotoboek;
+    const content = item.content.rendered;
+
+    return {
+      images: getAttrFromString(content, "img", "src")
+    }
   }
 
   get page() {

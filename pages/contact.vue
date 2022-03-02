@@ -33,15 +33,14 @@
             <member
               name="Cis Goris"
               tel="0032 14 41 43 79"
-              column="3"
+              column="6"
               role="Secretaris"
-            /><member
-              name="Wim Moonnen"
-              column="3"
-              role="Penningmeester"
-            /><member name="Willem Van Eemeren" column="3" /><member
+            /><member name="Wim Moonnen" column="6" role="Penningmeester" />
+          </div>
+          <div class="columns">
+            <member name="Willem Van Eemeren" column="6" /><member
               name="Paul Slangen"
-              column="3"
+              column="6"
             />
           </div>
         </div>

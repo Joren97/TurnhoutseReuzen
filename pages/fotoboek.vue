@@ -1,9 +1,9 @@
 <template>
-  <div class="section">
+  <div class="section fotoboek">
     <div class="container">
       <div class="columns">
         <div class="column is-12 content">
-          <h1 class="title is-1">Fotoboek</h1>
+          <h1 class="title is-1 has-text-white">Fotoboek</h1>
           <hr />
         </div>
       </div>
@@ -13,29 +13,27 @@
         </div>
       </div>
       <div class="columns is-multiline" v-else>
-        <div class="column is-6" v-for="(f, i) in formattedFotoboeken" :key="i">
-          <h2 class="title is-3">{{ f.title }}</h2>
+        <div class="column is-12" v-for="(f, i) in formattedFotoboeken" :key="i">
+          <h2 class="title is-3 has-text-white">{{ f.title }}</h2>
           <b-carousel
             :indicator-inside="false"
             :autoplay="false"
-            :overlay="galleryId == f.id"
-            @click="switchGallery(true, f.id)"
           >
             <b-carousel-item v-for="(url, i) in f.images" :key="i">
               <b-image class="image is-clickable" :src="url"></b-image>
             </b-carousel-item>
-            <span
-              v-if="gallery"
-              @click="switchGallery(false)"
-              class="modal-close is-large"
-            />
-            <template #indicators="props">
+            <!-- <template #indicators="props">
+            <figure class="al image" :draggable="false">
+                <img :draggable="false" :src="f.images[props.i]" :title="props.i">
+            </figure>
+        </template> -->
+            <!-- <template #indicators="props" v-if="f.images.length > 1">
               <b-image
                 class="al image"
                 :src="f.images[props.i]"
                 :title="props.i"
               ></b-image>
-            </template>
+            </template> -->
           </b-carousel>
         </div>
       </div>
@@ -106,3 +104,13 @@ export default class Fotoboek extends Vue {
   }
 }
 </script>
+<style scoped>
+.is-active .al img {
+    border: 1px solid #fff;
+    filter: grayscale(0%);
+}
+.al img {
+    border: 1px solid transparent;
+    filter: grayscale(100%);
+}
+</style>

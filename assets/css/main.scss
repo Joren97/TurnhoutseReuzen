@@ -139,7 +139,6 @@ $text: $black;
     background-image: url("~@/assets/img/kleurplaat.jpg");
     background-blend-mode: multiply;
     background-size: cover;
-    background-color: rgba(48, 49, 54, 0.55);
     box-shadow: 0 3px 30px 0px #303136;
 }
 
@@ -165,4 +164,19 @@ $text: $black;
     -webkit-box-shadow: 5px 5px 0px 0px $shadow;
     box-shadow: 5px 5px 0px 0px $shadow;
     border: 3px solid $black;
+}
+
+.fotoboek.section {
+    background-color: #222;
+    color: white;
+}
+
+section {
+    background-color: #e8e0d4;
+    color: #50483b !important;
+}
+
+.homepage-title {
+    top: 1rem;
+    left: 1rem;
 }

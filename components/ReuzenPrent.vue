@@ -1,5 +1,5 @@
 <template>
-  <div class="columns is-vcentered">
+  <div class="columns" :class="{'is-vcentered' : reus.acf.beschrijving == ''}">
     <div class="column is-3">
       <b-image
         :src="reus.acf.afbeelding"
