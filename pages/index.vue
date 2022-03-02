@@ -11,17 +11,16 @@
     </section>
     <div class="section">
       <div class="container">
+        <h1 class="title is-1">Welkom</h1>
+            <hr />
         <div class="columns">
           <div class="column is-8" v-show="pageLoading"><text-loader /></div>
           <div class="column is-8" v-show="!pageLoading && page">
-            <h1 class="title is-1">Welkom</h1>
-            <hr />
+            
             <div v-html="page.content.rendered" class="content"></div>
           </div>
           <div class="column is-4" v-show="pageLoading"><text-loader /></div>
           <div class="column is-4" v-show="!pageLoading">
-            <h2 class="title is-1">Neem contact op</h2>
-            <hr />
             <div class="content">
               <b-carousel
             :indicator-inside="true"
