@@ -2,11 +2,9 @@
   <div class="section is-relative">
     <div class="vertical-banner klein-peerke is-hidden-mobile"></div>
     <div class="container">
-      <reuzen-header
-        title="Klein Peerke,  d’Aachturenmoeijer, de Hummelpummeltjes en de Vuurman"
-        image="klein-peerke.svg"
-      />
-      <reuzen-prent v-for="i in kleinPeerke" :key="i.id" :reus="i" />
+      <reuzen-header title="Klein Peerken,  d’Aachturenmoeijer, de Hummelpummeltjes en de Vuurman"
+        image="klein-peerke.svg" />
+      <reuzen-prent v-for="(i, idx) in kleinPeerke" :key="i.id" :reus="i" :class="{'mt-6': idx == amount - 1}" />
     </div>
   </div>
 </template>
@@ -21,6 +19,10 @@ export default class Kaartreuzen extends Vue {
 
   get kleinPeerke() {
     return kleinPeerkeModule.items;
+  }
+
+  get amount(){
+    return kleinPeerkeModule.items.length;
   }
 }
 </script>

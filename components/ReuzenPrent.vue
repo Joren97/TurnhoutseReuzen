@@ -1,11 +1,7 @@
 <template>
-  <div class="columns" :class="{'is-vcentered' : reus.acf.beschrijving == ''}">
+  <div class="columns mb-6" :class="{ 'is-vcentered': !reus.acf.niet_centreren }">
     <div class="column is-3">
-      <b-image
-        :src="reus.acf.afbeelding"
-        custom-class="playing-card"
-        ratio="2by3"
-      ></b-image>
+      <b-image :src="reus.acf.afbeelding" custom-class="playing-card" ratio="2by3"></b-image>
     </div>
     <div class="column content ml-5">
       <h2 class="title is-1">

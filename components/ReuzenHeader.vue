@@ -1,7 +1,7 @@
 
 
       <template>
-  <div class="columns is-mobile is-vcentered">
+  <div class="columns is-mobile is-vcentered mb-5">
     <div class="column is-3 is-hidden-mobile"></div>
     <div class="column is-9-mobile">
       <h1 class="title is-size-1 is-size-4-mobile">{{ title }}</h1>
