@@ -37,6 +37,7 @@
           </b-navbar-item>
         </b-navbar-dropdown> -->
         <b-navbar-item tag="router-link" to="/contact">Contact</b-navbar-item>
+        <b-navbar-item tag="router-link" to="/boekingen">Boekingen</b-navbar-item>
       </template>
     </b-navbar>
 

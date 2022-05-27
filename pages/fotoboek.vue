@@ -13,7 +13,7 @@
         </div>
       </div>
       <div class="columns is-multiline" v-else>
-        <div class="column is-12" v-for="(f, i) in formattedFotoboeken" :key="i">
+        <div class="column is-8 is-12-mobile is-offset-2 mb-6" v-for="(f, i) in formattedFotoboeken" :key="i">
           <h2 class="title is-3 has-text-white">{{ f.title }}</h2>
           <b-carousel
             :indicator-inside="false"

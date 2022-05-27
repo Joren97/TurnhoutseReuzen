@@ -6,7 +6,7 @@
         src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/unknown-512.png"
       />
     </figure>
-    <h6 class="title is-6">{{ name }}</h6>
+    <h6 class="title is-6 mb-0">{{ name }}</h6>
     <p>{{ role }}<br />{{ tel }}<br />{{ email }}</p>
   </div>
 </template>

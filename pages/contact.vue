@@ -9,22 +9,21 @@
       </div>
       <div class="columns">
         <div class="column is-6 content">
-          <h3 class="title is-3">Contactgegevens</h3>
           <h5 class="title is-5">Maatschappelijke zetel</h5>
-          <p>De Merodelei 47, 2300 Turnhout<br />Belgie, 00 32 14 41 43 79</p>
+          <p class="mb-6">De Merodelei 47, 2300 Turnhout<br />Belgie, 00 32 14 41 43 79</p>
           <h5 class="title is-5">Bestuursleden</h5>
           <div class="columns">
             <member
               name="Jef Neeskens"
               email="info@reuzenclubturnhout.be"
-              tel="0032 14 41 43 79"
+              tel="00 32 (0)14 41 43 79"
               role="Voorzitter"
               column="6"
             />
             <member
               name="Frank Segers"
               email="frank@reuzenclubturnhout.be"
-              tel="0032 14 41 43 79"
+              tel="00 32 (0)478 36 60 72"
               role="Ondervoorzitter"
               column="6"
             />
@@ -32,7 +31,6 @@
           <div class="columns">
             <member
               name="Cis Goris"
-              tel="0032 14 41 43 79"
               column="6"
               role="Secretaris"
             /><member name="Wim Moonnen" column="6" role="Penningmeester" />
@@ -45,10 +43,9 @@
           </div>
         </div>
         <div class="column is-6">
-          <h3 class="title is-3">Contacteer ons</h3>
-          <b-tabs v-model="activeTab">
-            <b-tab-item label="Informatie" icon="information">
-              <b-field label="Naam">
+          <p>Heeft u vragen of opmerkingen? Neem dan contact op met ons via onderstaand formulier. Wij zullen uw bericht zo snel mogelijk beantwoorden.</p>
+            <section class="mt-3">
+              <b-field label="Naam + voornaam">
                 <b-input id="name" placeholder="Naam" v-model="name"></b-input>
               </b-field>
 
@@ -69,6 +66,7 @@
                   name="message"
                   id="message"
                   placeholder="Bericht"
+                  type="textarea"
                 ></b-input>
               </b-field>
               <div class="columns is-vcentered">
@@ -86,11 +84,7 @@
                   </span>
                 </div>
               </div>
-            </b-tab-item>
-            <b-tab-item label="Prijsaanvraag" icon="currency-eur">
-              Lorem ipsum dolor sit amet.
-            </b-tab-item>
-          </b-tabs>
+              </section>
         </div>
       </div>
     </div>
