@@ -22,8 +22,8 @@
           </div>
         </div>
       </div>
-      <div class="columns is-multiline is-justify-content-right mr-5 mb-5">
-        <div class="column is-2" v-for="k in kleurplaten" :key="k.id">
+      <div class="columns is-multiline is-justify-content-right mr-5 mb-6">
+        <div class="column is-2 mx-5" v-for="k in kleurplaten" :key="k.id">
           <a :href="k.source_url" target="_blank" link="noreferrer">
           <b-image
             :src="k.media_details.sizes.full.source_url"

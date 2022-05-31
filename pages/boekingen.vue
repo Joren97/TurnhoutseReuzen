@@ -42,11 +42,19 @@
               </b-field>
 
               <b-field label="Prijsaanvraag voor">
-            <b-select placeholder="Selecteer een groep" v-model="group" expanded>
+            <!-- <b-select placeholder="Selecteer een groep" v-model="group" expanded>
             <option value="turnhoutse_kaartreuzen">De Turnhoutse Kaartreuzen</option>
             <option value="dropsgemeenschap">De Dorpsgemeenschap</option>
             <option value="klein_peerke">Klein Peerke, d’ Aachturenmoeijer en hun gevolg</option>
-            </b-select>
+            </b-select> -->
+        </b-field>
+
+<b-field class="ml-6">
+            <b-checkbox>De Turnhoutse Kaartreuzen</b-checkbox>
+        </b-field><b-field  class="ml-6">
+            <b-checkbox>De Dorpsgemeenschap</b-checkbox>
+        </b-field><b-field  class="ml-6">
+            <b-checkbox>Klein Peerke, d’ Aachturenmoeijer en hun gevolg</b-checkbox>
         </b-field>
 
 
@@ -69,7 +77,7 @@
 
               <div class="columns is-vcentered">
                 <div class="column is-narrow">
-                  <b-button class="primary" @click="submitContact">
+                  <b-button class="is-primary" @click="submitContact">
                     Verzenden
                   </b-button>
                 </div>

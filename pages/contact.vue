@@ -9,7 +9,8 @@
       </div>
       <div class="columns">
         <div class="column is-6 content">
-          <h5 class="title is-5">Maatschappelijke zetel</h5>
+          <h5 class="title is-5 mb-1">Maatschappelijke zetel</h5>
+          <p class="mb-0">Turnhoutse Reuzenclub vzw</p>
           <p class="mb-6">De Merodelei 47, 2300 Turnhout<br />Belgie, 00 32 14 41 43 79</p>
           <h5 class="title is-5">Bestuursleden</h5>
           <div class="columns">
@@ -71,7 +72,7 @@
               </b-field>
               <div class="columns is-vcentered">
                 <div class="column is-narrow">
-                  <b-button class="primary" @click="submitContact">
+                  <b-button class="is-primary" @click="submitContact">
                     Verzenden
                   </b-button>
                 </div>
