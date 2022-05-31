@@ -100,7 +100,7 @@ export default class Boekingen extends Vue {
   org: string = "";
   date: Date = new Date();
   location: string = "";
-  group: string = null;
+  group: string = "";
 
   get status() {
     return contactModule.status;
@@ -121,7 +121,7 @@ export default class Boekingen extends Vue {
       formData.append("your-email", this.email);
       formData.append("your-tel", this.tel);
       formData.append("your-org", this.org);
-      formData.append("your-date", this.date);
+      formData.append("your-date", this.date.toUTCString());
       formData.append("your-location", this.location);
       formData.append("your-group", this.group);
       contactModule.submit(formData).then(() => {
