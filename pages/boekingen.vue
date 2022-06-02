@@ -9,90 +9,94 @@
       </div>
       <div class="columns">
         <div class="column is-12">
-          <p>De verschillende groepen van de Turnhoutse Reuzenclub zijn te boeken voor diverse activiteiten. 
-          Maak uw wensen kenbaar via onderstaand formulier en ontvang zo snel mogelijk een aanbieding op maat!</p>
-        
+          <p>
+            De verschillende groepen van de Turnhoutse Reuzenclub zijn te boeken voor
+            diverse activiteiten. Maak uw wensen kenbaar via onderstaand formulier en
+            ontvang zo snel mogelijk een aanbieding op maat!
+          </p>
+        </div>
       </div>
-      
-    </div>
-    <div class="columns">
-    <div class="column is-12">
+      <div class="columns">
+        <div class="column is-12">
           <section class="mt-3">
-              <b-field label="Naam + voornaam">
-                <b-input id="name" placeholder="Naam" v-model="name"></b-input>
-              </b-field>
+            <b-field label="Naam + voornaam">
+              <b-input id="name" placeholder="Naam" v-model="name"></b-input>
+            </b-field>
 
-              <b-field label="E-mail">
-                <b-input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="E-mail"
-                  v-model="email"
-                >
-                </b-input>
-              </b-field>
+            <b-field label="E-mail">
+              <b-input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="E-mail"
+                v-model="email"
+              >
+              </b-input>
+            </b-field>
 
-              <b-field label="Telefoonnummer">
-                <b-input id="tel" placeholder="Telefoonnummer" v-model="tel"></b-input>
-              </b-field>
+            <b-field label="Telefoonnummer">
+              <b-input id="tel" placeholder="Telefoonnummer" v-model="tel"></b-input>
+            </b-field>
 
-              <b-field label="Naam vereniging">
-                <b-input id="org" placeholder="Vereniging" v-model="org"></b-input>
-              </b-field>
+            <b-field label="Naam vereniging">
+              <b-input id="org" placeholder="Vereniging" v-model="org"></b-input>
+            </b-field>
 
-              <b-field label="Prijsaanvraag voor">
-            <!-- <b-select placeholder="Selecteer een groep" v-model="group" expanded>
+            <b-field label="Prijsaanvraag voor">
+              <!-- <b-select placeholder="Selecteer een groep" v-model="group" expanded>
             <option value="turnhoutse_kaartreuzen">De Turnhoutse Kaartreuzen</option>
             <option value="dropsgemeenschap">De Dorpsgemeenschap</option>
             <option value="klein_peerke">Klein Peerke, d’ Aachturenmoeijer en hun gevolg</option>
             </b-select> -->
-        </b-field>
+            </b-field>
 
-<b-field class="ml-6">
-            <b-checkbox>De Turnhoutse Kaartreuzen</b-checkbox>
-        </b-field><b-field  class="ml-6">
-            <b-checkbox>De Dorpsgemeenschap</b-checkbox>
-        </b-field><b-field  class="ml-6">
-            <b-checkbox>Klein Peerke, d’ Aachturenmoeijer en hun gevolg</b-checkbox>
-        </b-field>
+            <b-field class="ml-6">
+              <b-checkbox>De Turnhoutse Kaartreuzen</b-checkbox> </b-field
+            ><b-field class="ml-6">
+              <b-checkbox>De Dorpsgemeenschap</b-checkbox> </b-field
+            ><b-field class="ml-6">
+              <b-checkbox>Klein Peerke, d’ Aachturenmoeijer en hun gevolg</b-checkbox>
+            </b-field>
 
-
-              <b-field label="Datum activiteit">
-            <b-datepicker
-                v-model="date"                
+            <b-field label="Datum activiteit">
+              <b-datepicker
+                v-model="date"
                 placeholder="Klik om te selecteren.."
                 icon="calendar-today"
                 :icon-right="date ? 'close-circle' : ''"
                 icon-right-clickable
                 @icon-right-click="clearDate"
                 trap-focus
-                locale="fr-FR">
-            </b-datepicker>
-        </b-field>
+                locale="nl-BE"
+              >
+              </b-datepicker>
+            </b-field>
 
-        <b-field label="Plaats activiteit">
-                <b-input id="location" placeholder="Plaats activiteit" v-model="location"></b-input>
-              </b-field>
+            <b-field label="Plaats activiteit">
+              <b-input
+                id="location"
+                placeholder="Plaats activiteit"
+                v-model="location"
+              ></b-input>
+            </b-field>
 
-              <div class="columns is-vcentered">
-                <div class="column is-narrow">
-                  <b-button class="is-primary" @click="submitContact">
-                    Verzenden
-                  </b-button>
-                </div>
-                <div class="column is-narrow">
-                  <b-button @click="clear">Leegmaken</b-button>
-                </div>
-                <div class="column is-narrow">
-                  <span :class="`has-text-${$store.state.contact.status}`">
-                    {{ $store.state.contact.feedback }}
-                  </span>
-                </div>
+            <div class="columns is-vcentered">
+              <div class="column is-narrow">
+                <b-button class="is-primary" @click="submitContact"> Verzenden </b-button>
               </div>
-              </section>
-        </div></div>
-  </div>
+              <div class="column is-narrow">
+                <b-button @click="clear">Leegmaken</b-button>
+              </div>
+              <div class="column is-narrow">
+                <span :class="`has-text-${$store.state.contact.status}`">
+                  {{ $store.state.contact.feedback }}
+                </span>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -118,7 +122,7 @@ export default class Boekingen extends Vue {
     return contactModule.feedback;
   }
 
-  clearDate(){
+  clearDate() {
     this.date = new Date();
   }
 
