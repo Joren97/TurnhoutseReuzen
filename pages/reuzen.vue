@@ -52,7 +52,7 @@
       <div class="vertical-banner klein-peerke is-hidden-mobile"></div>
       <div class="container">
         <reuzen-header
-          title="Klein Peerken,  d’Aachturenmoeijer, de Hummelpummeltjes en de Vuurman"
+          title="Klein Peerken, <br> d’Aachturenmoeijer, <br> de Hummelpummeltjes <br> en de Vuurman"
           image="klein-peerke.svg"
         />
         <reuzen-prent

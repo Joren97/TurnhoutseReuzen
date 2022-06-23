@@ -8,22 +8,26 @@
           </figure>
         </div>
         <div class="column is-narrow has-text-white has-text-centered-mobile">
-          <h3 class="has-text-white has-text-weight-light">
-            Turnhoutse Reuzenclub vzw
-          </h3>
+          <h3 class="has-text-white has-text-weight-light">Turnhoutse Reuzenclub vzw</h3>
           <p>Maatschappelijke zetel:<br />De Merodelei 47<br />2300 Turnhout</p>
-          <p>www.turnhoutsereuzenclub.be<br>Facebook: De Turnhoutse Reuzen</p>
+          <p>www.turnhoutsereuzenclub.be<br />Facebook: De Turnhoutse Reuzen</p>
         </div>
         <div class="column has-text-white">
           <div class="columns is-vcentered">
-            <div class="column is-narrow has-text-centered-mobile">
-              <figure class="image is-128x128 is-inline-block">
-                <img src="~/assets/img/reuzen-in-vlaanderen.png" alt="Logo reuzen in vlaanderen" />
+            <div class="column has-text-centered-mobile">
+              <figure class="image is-1by1 is-fullwidth is-inline-block mx-0">
+                <img
+                  src="~/assets/img/reuzen-in-vlaanderen.png"
+                  alt="Logo reuzen in vlaanderen"
+                />
               </figure>
             </div>
-            <div class="column is-narrow has-text-centered-mobile">
-              <figure class="image is-128x128 is-inline-block">
-                <img src="~/assets/img/immaterieel-erfgoed.png" alt="Logo reusvriendelijke gemeente" />
+            <div class="column has-text-centered-mobile">
+              <figure class="image image is-1by1 is-fullwidth is-inline-block mx-0">
+                <img
+                  src="~/assets/img/immaterieel-erfgoed.png"
+                  alt="Logo reusvriendelijke gemeente"
+                />
               </figure>
             </div>
           </div>
@@ -32,7 +36,9 @@
           <div class="content has-text-right has-text-white py-3">
             <p>
               Ontwerp:
-              <a href="https://jorensynaeve.be" target="_blank" rel="noreferrer">Joren Synaeve</a>
+              <a href="https://jorensynaeve.be" target="_blank" rel="noreferrer"
+                >Joren Synaeve</a
+              >
             </p>
           </div>
         </div>
@@ -43,5 +49,5 @@
 <script lang="ts">
 import { Vue, Component } from "nuxt-property-decorator";
 @Component({})
-export default class Footer extends Vue { }
+export default class Footer extends Vue {}
 </script>
