@@ -257,7 +257,7 @@ export default class Contact extends Vue {
       const yourDate = new Date(this.date.getTime() - offset * 60 * 1000);
       formData.append("your-date", yourDate.toISOString().split("T")[0]);
       formData.append("your-location", this.location);
-      formData.append("your-group", this.group);
+      formData.append("your-group", this.group.join(","));
       contactModule.submitBoeking(formData).then(() => {
         {
           this.clearBoeking();
@@ -280,7 +280,7 @@ export default class Contact extends Vue {
     this.tel = "";
     this.org = "";
     this.location = "";
-    this.group = "";
+    this.group = [];
     this.date = new Date();
   }
 
