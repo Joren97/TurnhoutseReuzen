@@ -44,8 +44,21 @@
               column="6"
             />
           </div>
+          <div class="columns">
+            <div class="column has-text-centered">
+              <figure class="image is-inline-block my-3">
+                <img src="~/assets/img/sticker.svg" alt="Sticker" />
+              </figure>
+            </div>
+          </div>
         </div>
         <div class="column is-6">
+          <div class="columns">
+            <div class="column is-12 content">
+              <h1 class="title is-1">Vraag / opmerking?</h1>
+              <hr />
+            </div>
+          </div>
           <p>
             Heeft u vragen of opmerkingen? Neem dan contact op met ons via onderstaand
             formulier. Wij zullen uw bericht zo snel mogelijk beantwoorden.
@@ -89,26 +102,22 @@
               </div>
             </div>
           </section>
-        </div>
-      </div>
-      <div class="columns">
-        <div class="column is-12 content">
-          <h1 class="title is-1">Boekingen</h1>
-          <hr />
-        </div>
-      </div>
-      <div class="columns">
-        <div class="column is-12">
-          <p>
-            De verschillende groepen van de Turnhoutse Reuzenclub zijn te boeken voor
-            diverse activiteiten. Maak uw wensen kenbaar via onderstaand formulier en
-            ontvang zo snel mogelijk een aanbieding op maat!
-          </p>
-        </div>
-      </div>
-      <div class="columns">
-        <div class="column is-12">
-          <section class="mt-3">
+          <section style="margin-top: 5rem">
+            <div class="columns">
+              <div class="column is-12 content">
+                <h1 class="title is-1">Boekingen</h1>
+                <hr />
+              </div>
+            </div>
+            <div class="columns">
+              <div class="column is-12">
+                <p>
+                  De verschillende groepen van de Turnhoutse Reuzenclub zijn te boeken
+                  voor diverse activiteiten. Maak uw wensen kenbaar via onderstaand
+                  formulier en ontvang zo snel mogelijk een aanbieding op maat!
+                </p>
+              </div>
+            </div>
             <b-field label="Naam + voornaam">
               <b-input id="name" placeholder="Naam" v-model="boekingName"></b-input>
             </b-field>
